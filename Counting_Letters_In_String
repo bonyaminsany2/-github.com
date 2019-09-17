@@ -1,0 +1,13 @@
+
+
+# Using Dictionary, you can find the letters that has been repeated into your string.
+
+x = str(input("Enter your string: ")) 
+letter = {}
+
+for i in x:
+    if i not in letter:
+        letter[i] = 1
+    else:
+        letter[i] = letter[i] + 1
+print(letter)
