@@ -1,0 +1,15 @@
+
+class Solution:
+    def romanToInt(self, string):
+        val = 1
+        ans = 0
+        dictionary = {"I":1,"V":5,"X":10,"L":50,"C":100,"D":500,"M":1000}
+        for cha in string[::-1]:
+            if dictionary[cha] >= val:
+                ans += dictionary[cha]
+                val = max(dictionary[cha],val)
+            else:
+                ans -= dictionary[cha]
+        return ans
+        
+
